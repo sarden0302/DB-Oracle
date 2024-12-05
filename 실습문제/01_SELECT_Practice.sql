@@ -181,6 +181,31 @@ SELECT EMP_NAME, DEPT_CODE
 FROM EMPLOYEE
 WHERE DEPT_CODE NOT IN('D1', 'D3');
 
+-- D5 부서에 속한 사원의 사원번호 사원이름 부서코드 조회
+SELECT emp_id, emp_name, dept_code
+FROM employee
+WHERE dept_code = 'D5';
+
+-- 입사일이 2000년 이후인 지원들의 정보 조회 
+SELECT *
+FROM employee
+WHERE hire_date >= TO_DATE('2000-01-01', 'YYYY-MM-DD');
+
+-- 퇴직여부가 'Y'이고, 퇴사일이 2015년 이후인 지원들의 정보
+SELECT *
+FROM employee
+WHERE ENT_YN = 'Y' AND ENT_DATE >= TO_DATE('2015-01-01', 'YYYY-MM-DD');
+
+-- employee 테이블에서 성씨가 '전'씨인 사원의 이름
+SELECT emp_name
+FROM employee
+WHERE emp_name LIKE '전%';
+
+-- employee 테이블에서 이름이 수로 끝나는 사원의 이름 조회
+SELECT emp_name
+FROM employee
+WHERE emp_name LIKE '%수';
+
 
 
 SELECT * 

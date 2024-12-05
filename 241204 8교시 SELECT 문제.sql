@@ -114,7 +114,7 @@ WHERE email LIKE '%com';
 -- 24. EMPLOYEE 테이블에서 HIRE_DATE의 연도가 2021년인 직원들의 정보를 조회하세요.
 SELECT *
 FROM employee
-WHERE hire_date LIKE '21%';
+WHERE hire_date >= TO_DATE('2021-01-01', 'YYYY-MM-DD');
 
 -- 25. EMPLOYEE 테이블에서 EMP_NAME의 마지막 글자가 '호'인 직원들의 정보를 조회하세요.
 SELECT *

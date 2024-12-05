@@ -57,3 +57,28 @@ IN  ()      : 조건에 여러 값을 지정할 때 사용 값의 목록 중 하
 NOT IN  ()  : IN과 반대로, 조건에서 지정한 목록에 포함되지 않는 값만 선택
               값의 목록과 일치하지 않는 행만 선택
 */
+
+/***** ORDER BY *****/
+/*
+: SELECT 문의 조회 결과를 정렬할 때 사용하는 구문
+SELECT 구문에서 제일 마지막에 해석
+
+[작성법]
+
+3. SELECT 컬럼명 AS 별칭, 컬럼명, 컬럼명, ...
+1. FROM 테이블명
+2. WHERE 
+...
+Last. ORDER BY 컬럼명 | 별칭 | 컬럼순서(ASC/ DESC)
+
+ORDER BY ASC (ascending)
+         DESC (descending)
+   - Default : ASC
+   - NULLS FIRST : null 인 순서부터 맨 위 
+   - NULLS LAST  : null 인 순서를 맨 아래 (Default)
+   
+     ※ ORDER BY 맨 뒤에 작성
+
+장점 : 자바, 자바스크립트 그 외 언어 중 정렬이 가장 빠르다.
+
+*/
