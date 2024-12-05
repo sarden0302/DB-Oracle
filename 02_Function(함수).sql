@@ -34,4 +34,12 @@ WHERE LOWER(컬럼명) LIKE LOWER('%조회할데이터%');
 SELECT LOWER(컬럼명) AS 소문자컬럼명
 FROM 테이블명;
 
+COUNT(컬럼명) : 특정컬럼에서 조회된 행의 개수 반환
+- COUNT(*) 조회된 모든 행의 개수 반환
+
+- COUNT(DISTINCT 컬럼명) : 특정컬럼에서 중복 값을 제외한 행의 개수 반환
+
+
+AVG(숫자만 기록된 컬럼명) : 그룹의 평균 
+
 */
