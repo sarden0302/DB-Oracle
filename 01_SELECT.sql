@@ -1,4 +1,25 @@
-/* AS(AliaS) : 별칭 */
+/* AS(AliaS) : 별칭 
+특정 테이블이나 컬럼명에 대해서 변수명(약자)을 지정하는 방식
+- 별칭 지정은 SELECT, FROM, ORDER BY 절에서 가능
+- GROUP BY와 WHERE 절은 작성된 별칭 사용 가능
+
+[작성법]
+1. SELECT 컬럼명 AS 별칭    
+   - 문자 o, 띄어쓰기 x, 특수문자 x (_를 이용해서 띄어쓰기 표기)
+   ex) SELECT emp_id AS 사원아이디
+   SELECT 컬럼명 AS "별칭"
+   - 문자 o, 띄어쓰기 o, 특수문자 o
+   SELECT 컬럼명 별칭
+   - 문자 o, 띄어쓰기 x, 특수문자 x
+   SELECT "별칭"
+   - 문자 o, 띄어쓰기 o, 특수문자 o
+2. FROM 테이블명 별칭        ex) FROM employee e
+   
+   ※ "" 의미 (글자 그대로 의식)
+      1) 대/소문자 구분
+      2) 특수문자, 띄어쓰기 인식
+      * Oracle 에서 문자열은 ''
+*/
 
 /* SYSDATE SYSTIMESTAMP 현재 시간 */
 -- SYSDATE      : 현재시간 (년, 월, 일, 시, 분, 초)
