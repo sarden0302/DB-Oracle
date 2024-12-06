@@ -56,3 +56,7 @@ ORDER BY phone DESC NULLS FIRST;
 SELECT EMP_NAME, phone
 FROM EMPLOYEE E;
 
+SELECT *
+FROM employee
+WHERE job_code IN('J6', 'J7');
+

@@ -1,5 +1,5 @@
 -- 평균 급여 조회
-SELECT CEIL(AVG(salary))
+SELECT FLOOR(AVG(salary))
 FROM employee;
 
 -- 부서 코드가 'D5'인 사원의 수 
@@ -18,13 +18,13 @@ FROM EMPLOYEE E
 WHERE PHONE IS NULL;
 
 -- 존재하는 부서코드의 수를 조회
-SELECT COUNT(DEPT_CODE)
+SELECT COUNT(DISTINCT DEPT_CODE)
 FROM EMPLOYEE E;
 
 -- 부서명이 '영업'으로 끝나는 부서 조회
 SELECT *
 FROM DEPARTMENT
-WHERE dept_title LIKE '%영업%';
+WHERE dept_title LIKE '%영업';
 
 -- 이름이 대문자로 표시된 직원 조회 
 SELECT *
