@@ -214,5 +214,10 @@ ORDER BY DEPT_ID;
 
 SELECT * FROM JOB;
 
+SELECT *
+FROM cafe;
+
+SELECT *
+FROM menu;
 
 

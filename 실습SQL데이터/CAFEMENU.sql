@@ -3,7 +3,7 @@ CREATE TABLE Cafe (
     cafe_name VARCHAR2(100) NOT NULL,  -- 카페 이름
     location VARCHAR2(255),            -- 카페 위치
     contact_number VARCHAR2(20)        -- 카페 연락처
-);
+); 
 
 
 CREATE TABLE Menu (

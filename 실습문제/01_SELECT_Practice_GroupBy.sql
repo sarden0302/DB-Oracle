@@ -81,11 +81,6 @@ FROM employee
 GROUP BY DEPT_CODE
 ORDER BY count(CASE WHEN ent_yn = 'Y' THEN 1 end) DESC, DEPT_CODE;
 
-CREATE TABLE Cafe (
-    cafe_id NUMBER PRIMARY KEY,        -- 카페의 고유 ID
-    cafe_name VARCHAR2(100) NOT NULL,  -- 카페 이름
-    location VARCHAR2(255),            -- 카페 위치
-    contact_number VARCHAR2(20)        -- 카페 연락처
-);
+
 
 
