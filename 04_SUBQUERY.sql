@@ -8,5 +8,4 @@ SUBQUERY (서브쿼리)
     - SELECT 컬럼명       FROM 테이블 이름  WHERE (서브쿼리절)
     - ...
       HAVING (서브쿼리절)
-
 */

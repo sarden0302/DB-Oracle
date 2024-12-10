@@ -15,12 +15,12 @@ WHERE D.DEPT_ID = (
 );
 
 -- 2. 문제: J2 직급의 평균 급여보다 높은 급여를 받는 사원의 이름과 급여를 조회하세요.
-SELECT emp_name, salary
-FROM EMPLOYEE
-WHERE salary > (
-	SELECT AVG(SALARY)
-	FROM EMPLOYEE
-	WHERE job_code = 'J2'
+SELECT EM.emp_name, EM.salary
+FROM EMPLOYEE EM
+WHERE EM.salary > (
+	SELECT AVG(ES.SALARY)
+	FROM EMPLOYEE ES
+	WHERE ES.job_code = 'J2'
 	
 );
 
@@ -73,5 +73,17 @@ SELECT (
 	, (
 	SELECT MIN(E2.salary)
 	FROM employee E2) AS MIN_SALARY
-FROM dual;
+FROM DUAL;
+/**
+ * SELECT MAX(E1.salary) FROM employee E1) AS MAX_SALARY : 가장 높은 급여
+ * SELECT MIN(E2.salary) FROM employee E2) : 가장 낮은 급여
+ * 
+ * DUAL = 가상 테이블 DUmmy tAbLe
+ * 		※ Oracle에만 있음
+ * 		- 다른 SQL(MySQL || PostgresSQL) 에서는 FROM 테이블 생략 가능
+ * 
+ * ex) 현재시간 표현 쿼리
+ * ORACLE  : SELECT SYSDATE FROM DUAL:
+ * 이외 SQL : SELECT SYSDATE;
+ */
 
