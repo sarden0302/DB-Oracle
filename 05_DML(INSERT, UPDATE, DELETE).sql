@@ -25,6 +25,7 @@ CREATE TABLE EATS (
     contact_number VARCHAR2(20)        -- EATS 연락처
 );
 
+
 /*
 1. INSERT 
     테이블에 새로운 행을 추가하는 구문
