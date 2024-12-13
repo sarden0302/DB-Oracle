@@ -113,3 +113,42 @@ INSERT INTO EATS_MENU (MENU_ID, CAFE_ID, MENU_NAME, DESCRIPTION, PRICE)
 VALUES (40, 20, '그린티 프라페', '녹차와 우유의 달콤한 음료', 6000);
 
 COMMIT;
+
+
+-- DEPARTMENT 테이블에서 DEPT_ID 가 'D9'인 부서 정보 조회
+SELECT *
+FROM DEPARTMENT
+WHERE dept_id = 'D9';
+
+-- department 테이블에서 dept_id가 'D9'인 행의 dept_title을 전략기획팀으로 수정
+UPDATE department SET dept_title = '전략기획팀' WHERE dept_id = 'D9';
+
+SELECT *
+FROM DEPARTMENT;
+
+SELECT * FROM EATS
+ORDER BY CAFE_ID;
+
+UPDATE EATS SET CONTACT_NUMBER = '010-0000-1111' WHERE CAFE_NAME='로맨틱블루';
+
+-- EATS_MENU table 에서 menu_name = 화이트 모카, 6000원 update
+UPDATE eats_menu SET price = 6000 WHERE menu_name = '화이트 모카';
+
+SELECT *
+FROM EATS_MENU
+ORDER BY menu_ID;
+
+UPDATE eats_menu
+SET DESCRIPTION = '홍차와 우유가 어우러진 진한 맛의 밀크티'
+WHERE menu_name = '밀크티';
+
+UPDATE eats_menu SET price = price * 1.1 WHERE price <= 5500;
+
+SELECT *
+FROM eats;
+
+-- 서울시 종로구 010-2345-6789 에서 변경
+UPDATE eats 
+SET location = '경기도 안양시', CONTACT_NUMBER = NULL
+WHERE CAFE_NAME = '그린빈 카페';
+
