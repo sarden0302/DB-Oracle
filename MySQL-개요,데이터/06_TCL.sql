@@ -32,3 +32,21 @@ Isolation(고립성)   : 여러 트랜잭션이 동시에 실행될 때, 서로�
 Durability(지속성)  : 트랜잭션이 완료된 후의 결과는 영구적으로 저장
                      ex) 시스템이 다운되어도 성공적으로 완료된 거래 결과는 유지되어야 함
 */
+
+/*
+SELECT * FROM khtuser.user;
+-- user phone 앞에 작성된 kor) 제거
+set sql_safe_updates = 0; -- 안전모드 종료
+
+start transaction;           -- savepoint 를 사용하기 위해서는 start transaction 시작 수동 제어
+savepoint sp1;              -- 임시로 되돌릴 위치이름 sp1 설정
+use khtuser;              -- khtuser db로 접속
+update user set phone = substring_index(phone, ')', 1); -- 수정할 update 작성
+select * from user;                                        -- 제대로 수정했는지 확인
+
+rollback to sp1;           -- 원하는대로 결과 수정 X sp1 임시저장한 위치로 되돌리기 
+update user set phone = substring_index(phone, ')', -1); -- 수정
+select * from user;            -- 올바르게 수정됐는지 확인
+
+commit;                        -- 수정 결과 저장
+*/
