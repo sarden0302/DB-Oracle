@@ -54,6 +54,7 @@ NOT NULL :
         user_id INT          AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) NOT NULL,
         signupDate DATE      NOT NULL DEFAULT CURRENT_DATE
+        create_at DATETIME   NOT NULL DEFAULT current_timestamp -- 기본 값 적용
     )
     username && signupDate 모두 NOT NULL
 
