@@ -45,8 +45,7 @@ FOR EACH ROW
 BEGIN 
 	:NEW.studentid := seq_user.NEXTVAL	
 END;
-DROP TRIGGER trg_user;
-/*/ : ORACLE 구문할 때 명령프롬포트(CMD)나 SQLDEVLEOPER 환경에서 사용할 때는 작성해야함 */
+DROP SEQUENCE seq_user;
 
 INSERT INTO student (studentname, studentage) VALUES ('강철수', 12);
 INSERT INTO student (studentname, studentage) VALUES ('박길자', 13);
@@ -59,6 +58,6 @@ CREATE OR REPLACE TRIGGER trg_std
 BEFORE INSERT ON student 
 FOR EACH ROW 
 BEGIN 
-	-- 시퀀스를 사용해서 student 테이블 내에 studentid 번호를 자동으로 생성
 	:NEW.studentid := seq_user.NEXTVAL	
 END;
+

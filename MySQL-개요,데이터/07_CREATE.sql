@@ -15,11 +15,9 @@ MySQL
         PROCEDURE, FUNCTION, SYNONYM 등 생성
 PRIMARY KEY = 기본, 기준이 되는 키, UNIQUE + NOT NULL
 AUTO_INCREMENT = 자동으로 번호 증가 설정
-
 */
 
 /*
-
 -- CREATE
 -- 테이블이나 인덱스, 뷰 등 다양한 데이터 베이스를 생성하는 구문
 -- 테이블로 생성된 객체는 DROP 구문을 통해 제거할 수 있음
@@ -37,5 +35,6 @@ CREATE TABLE 테이블명 (
 );
 -- DEFAULT (=기본값) : 컬럼의 기본 값 지정(필수 아님)
 --> INSERT UPDATE 시 해당 컬럼에 값을 넣지 않으면 지정한 기본값이 들어간다.
-
 */
+
+-- CREATE를 생성할 때 제약조건은 15_제약조건.sql 참조조
